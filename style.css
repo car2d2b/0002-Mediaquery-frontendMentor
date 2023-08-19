@@ -1,0 +1,132 @@
+:Root{
+    
+    --clr-background: rgb(243, 234, 227);
+    --clr-component: rgb(255, 255, 255);
+    --clr-buttfont: rgb(61, 129, 104);
+    --clr-h1: rgb(29, 36, 41);
+    --clr-p: rgb(124, 126, 138);
+
+    --wLarge: 700;
+    --wmid: 500;
+
+    --pad1: 1.5rem;
+    --padbutt: 0.5rem;
+
+    --size-p: 14px;
+    --size-g: 8.5px;
+    
+    --radius: 10px;
+}
+
+/* Pre plan for annoying css things and stuff */
+
+*{
+    margin: 0;
+    font: inherit;
+    box-sizing: border-box;
+}
+
+
+img,
+svg{
+    display: block;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+
+
+/* Sections */
+
+body{
+    min-height: 100vh;
+    border: solid 1px brown; /*shows the body background color*/
+    background-color: var(--clr-background);
+
+    display: grid;
+    place-items: center;
+}
+
+.container{
+    background-color: var(--clr-component);
+    max-width: 26rem;
+    border-radius: var(--radius);
+}
+
+.equal-columns{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.content{
+    padding:var(--pad1);
+    display:flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.image img{
+    border-radius: var(--radius) 0 0 var(--radius);
+}
+
+.header-price{
+    font-family: 'Fraunces', serif;
+}
+
+.info{
+    letter-spacing: 4px;
+    color: var(--clr-p);
+}
+
+.para{
+    color: var(--clr-p);
+}
+
+
+
+
+.button{
+    background-color: var(--clr-buttfont);
+    color: var(--clr-component);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: var(--padbutt);
+    border-radius: 4px;
+}
+
+.button svg{
+    height: 10px;
+    width: 10px;
+    display: inline-block;
+}
+
+/* Attributes */
+
+
+.fontM{
+    font-family: 'Montserrat', sans-serif;
+}
+
+.fontF{
+    font-family: 'Fraunces', serif;
+}
+
+.transform-upper{
+    text-transform: uppercase
+}
+
+
+.size-g{
+    font-size: var(--size-g);
+}
+
+.wLarge{
+    font-weight: var(--wLarge);
+}
+
+
+.wMid{
+    font-weight: var(--wmid);
+}

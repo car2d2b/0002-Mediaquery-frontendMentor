@@ -52,6 +52,7 @@ body{
     background-color: var(--clr-component);
     max-width: 26rem;
     border-radius: var(--radius);
+    margin-inline: 1rem;
 }
 
 .equal-columns{
@@ -66,9 +67,31 @@ body{
     gap: 10px;
 }
 
+
+@media (max-width:436px) {
+
+    .equal-columns{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .image img{
+
+
+    }
+
+}
+
 .image img{
     border-radius: var(--radius) 0 0 var(--radius);
 }
+
+.image source {
+    width: 10px;
+}
+
+
+
 
 .header-price{
     font-family: 'Fraunces', serif;
@@ -84,8 +107,6 @@ body{
 }
 
 
-
-
 .button{
     background-color: var(--clr-buttfont);
     color: var(--clr-component);
@@ -96,11 +117,28 @@ body{
     border-radius: 4px;
 }
 
-.button svg{
-    height: 10px;
-    width: 10px;
-    display: inline-block;
+
+.button[data-icon="shopping-cart"]::before {
+content:  "";
+background-image: url(images/icon-cart.svg);
+width: 15px;
+height: 16px;
+margin-right: 10px;
 }
+
+
+
+
+/*.button svg{
+    height: 12px;
+    width: 12px;
+    object-fit: cover;
+    display: inline-block;
+    margin-inline: 10px;
+    overflow: visible;
+}
+Should use data attribute instead
+*/
 
 /* Attributes */
 
